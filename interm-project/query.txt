@@ -1,0 +1,38 @@
+
+-- by region
+SELECT product, region  , SUM(total_sales) AS total_sales
+FROM sales_data
+GROUP BY region , product;
+
+
+-- by time period
+
+select product , sum(total_sales) as total_sales from sales_data 
+GROUP BY product , EXTRACT( month from order_date )  
+order by total_sales desc  ; 
+
+--------------------------------------------------------------------------
+
+-- Identify top-selling products by calculating total sales 
+
+select product from (select product , sum(total_sales ) as total_sales 
+from sales_data group by product order by total_sales DESC) 
+tab limit 3 ; 
+
+
+-- Identify top-selling products by calculating units sold.
+
+select product from
+(select product , sum(units_sold) as units_sold 
+from sales_data group by product order by units_sold  DESC) as tab 
+limit 3 ; 
+
+
+-----------------------------------------------------------------------
+
+
+
+
+
+
+

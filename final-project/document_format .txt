@@ -1,0 +1,31 @@
+logo cognizant 
+name of your project 
+what document it is 
+prepare an excel 
+name - last updated by 
+role - 
+signature and date
+
+table of contents 
+intro
+purpose and scope 
+design and architechture  -- > flow chart 
+write business requirement 
+dynamic changes that is asked to do 
+
+
+
+proper indentation 
+proper font side 
+add headers and footers to your page 
+proper heading
+use bullet points
+use numbering , abc 
+dont write paragraphs 
+
+
+
+
+
+
+

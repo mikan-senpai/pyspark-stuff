@@ -1,0 +1,70 @@
+select * from sales_data ;
+
+-- add NEW PROFIT col
+ALTER TABLE sales_data
+ADD COLUMN new_profit INT;
+ 
+ -- MANUALLY CALCULATING THE PROFIT
+UPDATE sales_data
+SET new_profit =  ( operating_margin * total_sales ) / 100 ;
+ 
+--DROP OLD COLUMN OPERATING_MARGIN
+ALTER TABLE SALES_DATA
+DROP COLUMN operating_profit;
+
+-- RENAME THE NEW COL TO THE ORIGINAL COLUMN NAME
+ALTER TABLE SALES_DATA
+RENAME new_profit TO operating_profit;
+
+
+----------
+
+
+select * from sales_data ; 
+
+-------
+
+SELECT product, region  , SUM(total_sales) AS total_sales
+FROM sales_data
+GROUP BY region , product;
+--------
+
+
+
+
+-- by time period
+SELECT product ,TO_CHAR(order_date::DATE,'MONTH' ) as month, sum(total_sales)  AS total_sales FROM sales_data
+GROUP BY product , month  , REGION
+ORDER BY total_sales desc  ;
+
+-- -------------------------------------------------------------
+-- Determine the highest revenue generating regions by analyzing  sales revenue per region
+
+select region , sum(total_sales ) as total_sales
+from sales_data 
+group by region  
+order by total_sales  desc ; 
+
+
+
+
+
+
+-------------------------------------------------------------------
+
+redshift-cluster-1.c4hapfhrjfor.ap-south-1.redshift.amazonaws.com
+5439
+dev
+
+
+
+COPY dev.public.sales_data FROM 's3://redshift-project-4526/Adidas US Sales Datasets.csv' IAM_ROLE 'arn:aws:iam::610686160591:role/s3-full-access' FORMAT AS CSV DELIMITER ',' QUOTE '"' IGNOREHEADER 1 REGION AS 'ap-south-1';
+
+
+
+
+-- copy from redshift to s3 bucket (execute in ec2)
+
+COPY dev.public.sales_data FROM 's3://redshift-project-4526/Adidas US Sales Datasets.csv' IAM_ROLE 'arn:aws:iam::610686160591:role/s3-full-access' FORMAT AS CSV DELIMITER ',' QUOTE '"' IGNOREHEADER 1 REGION AS 'ap-south-1'
+
+

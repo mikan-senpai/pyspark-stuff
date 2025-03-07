@@ -1,0 +1,42 @@
+### PS: Project all the Order_ids
+### PS: Project all the Orders and their status.
+### PS: Convert the Order date into YYYY/MM/DD Format.
+### PS: Create key value pairs with key as Order id and values as whole records.
+### PS: Project all the Order_item_ids and their subtotal.
+### PS: Applied user defined function to convert status into lowercase.
+### PS : Word count in orders file.
+
+### PS: Print all the orders which are closed or Complete
+
+### Print all the orders which areand ordered in the year 2013.
+
+Join
+==PS: list customr_id and subtotal.
+
+### Count the number of orders which are closed.
+
+### Find the total quantity sold for Order ID 1 to 10.
+
+
+babjee reddy babjee reddy ponnam
+
+babjee,1
+reddy ,1
+babjee,1
+reddy ,1
+ponnam,1
+
+babjee,[1,10
+reddy ,[1,1]
+ponnm,[1]
+
+babjee 2
+reddy 2
+pnnam 1
+
+
+
+
+
+
+	

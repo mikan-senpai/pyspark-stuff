@@ -1,0 +1,6 @@
+e1,babjee,50000,10,e2
+e2,naveen,40000,20,e3
+e3,praveen,60000,10,
+e4,sundar,20000,10,e2
+e5,raheem,80000,30,e3
+e6,suil,4000,30,e3

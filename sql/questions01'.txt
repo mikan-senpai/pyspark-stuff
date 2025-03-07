@@ -1,0 +1,72 @@
+select 
+	flight_id ,
+	flight_name , 
+	flight_destination 
+from flight_details f
+left join booking b
+using(flight_id)
+where booking_id is null ;
+
+================================================
+
+
+select 
+	distinct patient_id , 
+	p_first_name , 
+	coalesce(p_last_name , 'Not Available')
+	as Last_Name
+from BILL B
+join APPOINTMENT A 
+	using(App_number)
+join PATIENT P 
+	using(Patient_id)
+where lower(Bill_status) = 'paid' ;
+
+
+================================================
+
+
+select 
+	cake_name , 
+	round(avg(quantity),2) as average_quantity 
+from cakes c
+join order_details o 
+using(cake_id)
+group by cake_flavour , cake_name
+having lower(cake_flavour) != 'mango'
+order by cake_name desc ; 
+
+===============================================
+
+select 
+	enrollment_id ,
+	customer_name ,
+	policy_name , 
+	rate_of_interest 
+from customer c 
+join policyenrollment e
+using(customer_id )
+join policy p 
+using(policy_id)
+where lower(gender) = 'm' 
+order by enrollment_id desc ;
+ 
+===============================================
+
+
+
+
+select 
+	p_first_name , 
+	city 
+from pateint 
+group by city 
+	
+	
+===============================================
+
+
+
+
+
+

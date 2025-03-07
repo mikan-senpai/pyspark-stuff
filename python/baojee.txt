@@ -1,0 +1,48 @@
+1. string is immutable ,
+
+
+
+group of characters
+
+list , 
+
+
+collection datatype 
+
+
+loosely type = datatype would be assigned in runtime
+
+
+
+slicestirng 
+
+st = "hi how are you "
+
+st[3:4] -> from 3 indx to 4 index 
+
+
+
+list - > mutable objects - > alow duplicate values -> can contain items y
+
+lit.append()
+
+lost.extend
+list.pop -> dlete te value ad will show you the deleted value 
+list.remove - > delet ethe value but will not show 
+
+list.insert(3,'mango') ; 
+
+
+list.sort()
+sorted(
+list.sort(reverse=true)
+
+
+tuple has only two methods 
+
+
+
+dic.popitem()   --> remove the last element from the dictionary 
+
+
+dic.update({'city':'chennai' })     ->    can update multiple values

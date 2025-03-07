@@ -1,0 +1,54 @@
+maximum salary ; 
+
+
+
+duplicate values : 
+select col1, col2 , count(*) as count_num 
+from table 
+group by col1, col2 
+having count_num > 1 ; 
+
+from table not in ( select distinct * from table)
+
+
+
+
+select * from emp_tab 
+where salary = 
+(select max(salary) from emp_tab ) ; 
+
+
+--d)	Write a query to find the fourth highest salary from the above table.
+
+select salary from  
+(select t.* , dense_rank() over(order by salary desc ) rk from tab  ) t 
+where rk = 4 ; 
+
+
+
+check dbc version info ; 
+
+select * from dbc.dbcinfov; 
+
+-- case function in sql 
+
+select name , 
+case 
+	when age < 18 then "child"
+	else "adult" 
+end as what_he_is
+from tab  ;
+
+
+
+
+
+-------------------------------------------
+select extract (month from "22-02-1988")
+
+month(order_date ) 
+ 
+
+
+select date_add('2001-09-21' interval 4 day)
+select date_add('2001-09-21' interval 4 month)
