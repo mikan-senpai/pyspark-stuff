@@ -212,6 +212,3 @@ model = lr.fit(df_transformed)
 predictions = model.transform(df_transformed)
 predictions.show()
 ```
-
-## Conclusion
-PySpark provides a powerful API for big data processing and analytics, supporting SQL queries, machine learning, and streaming capabilities. Mastering PySpark allows data engineers and analysts to handle large-scale datasets efficiently.
